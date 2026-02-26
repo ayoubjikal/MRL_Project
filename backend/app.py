@@ -430,11 +430,10 @@ def generate_report(current_user_id):
             pdf.cell(30, 10, status, 1)
             pdf.ln()
             
-        pdf_out = io.BytesIO()
-        pdf_str = pdf.output(dest='S').encode('latin1')
-        pdf_out.write(pdf_str)
+        pdf_bytes = pdf.output()
+        pdf_out = io.BytesIO(pdf_bytes)
         pdf_out.seek(0)
-        
+
         return send_file(
             pdf_out,
             mimetype='application/pdf',
