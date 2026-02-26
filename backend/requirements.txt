@@ -1,0 +1,9 @@
+Flask==2.3.0
+Flask-CORS==4.0.0
+python-dotenv==1.0.0
+mysql-connector-python==8.0.33
+PyJWT==2.8.0
+bcrypt==4.0.1
+requests==2.31.0
+google-generativeai==0.3.0
+fpdf2==2.7.0

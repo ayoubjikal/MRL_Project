@@ -1,0 +1,130 @@
+# Environment Variables
+.env
+.env.local
+.env.*.local
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+ENV/
+env/
+.venv/
+
+# IDE & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+.project
+.pydevproject
+.settings/
+*.iml
+
+# Node & Frontend
+node_modules/
+npm-debug.log
+yarn-error.log
+.next/
+out/
+dist/
+build/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+uploads/
+*.backup
+
+# Logs
+*.log
+logs/
+
+# OS Files
+.DS_Store
+Thumbs.db
+.ftpquota
+.htaccess
+
+# Temporary Files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+.~*
+
+# Credentials & Secrets
+credentials.json
+.credentials/
+secrets.json
+keys/
+*.pem
+*.key
+*.pub
+
+# Git
+.git/
+.gitmodules
+
+# OS
+.AppleDouble
+.LSOverride
+._*
+
+# Package Managers
+package-lock.json
+poetry.lock
+Pipfile.lock
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# IDE Generated
+.vscode/settings.json
+.vscode/tasks.json
+.idea/workspace.xml
+.idea/inspectionProfiles/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.nyc_output/
+coverage/
+
+# Build
+dist/
+build/
+*.egg-info/

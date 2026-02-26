@@ -1,0 +1,139 @@
+% ============================================================
+%  Bulletin d'Analyse — Exemple pour tester le module OCR
+%  Compiler : pdflatex rapport_test_ocr.tex
+% ============================================================
+
+\documentclass[a4paper,11pt]{article}
+
+% ── Packages ────────────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{colortbl}
+
+\geometry{top=2cm, bottom=2cm, left=2.5cm, right=2.5cm}
+
+% ── Couleurs ────────────────────────────────────────────────
+\definecolor{labgreen}{RGB}{34,139,34}
+\definecolor{headerblue}{RGB}{0,70,140}
+\definecolor{lightgray}{RGB}{245,245,245}
+\definecolor{warnorange}{RGB}{200,100,0}
+
+% ── En-tête / Pied de page ──────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[L]{\textcolor{headerblue}{\textbf{Laboratoire AgriTest Maroc}}}
+\fancyhead[R]{\textcolor{gray}{\small Rapport confidentiel}}
+\fancyfoot[C]{\small Page \thepage}
+
+% ============================================================
+\begin{document}
+
+% ── Titre du rapport ────────────────────────────────────────
+\begin{center}
+    {\LARGE \textcolor{headerblue}{\textbf{BULLETIN D'ANALYSE}}} \\[6pt]
+    {\large Résidus de Pesticides — Contrôle avant export} \\[4pt]
+    {\color{gray}\rule{\textwidth}{0.4pt}}
+\end{center}
+
+\vspace{8pt}
+
+% ── Informations générales (métadonnées) ────────────────────
+\begin{tabular}{@{}p{5.5cm} p{8cm}@{}}
+    \textbf{Laboratoire :}          & Laboratoire AgriTest Maroc \\[4pt]
+    \textbf{Produit :}              & Tomates fraîches \\[4pt]
+    \textbf{Lot :}                  & MAR-2025-0412 \\[4pt]
+    \textbf{Date prélèvement :}     & 15/01/2025 \\[4pt]
+    \textbf{Pays d'origine :}       & Maroc \\[4pt]
+    \textbf{Méthode d'analyse :}    & EN 15662 — QuEChERS / LC-MS/MS \& GC-MS/MS \\[4pt]
+    \textbf{Accréditation :}        & ISO/IEC 17025 — COFRAC \\[4pt]
+    \textbf{N° rapport :}           & AGT-2025-01-0412 \\[4pt]
+    \textbf{Date rapport :}         & 20/01/2025 \\[4pt]
+\end{tabular}
+
+\vspace{14pt}
+{\color{gray}\rule{\textwidth}{0.4pt}}
+\vspace{8pt}
+
+% ── Tableau des résultats ────────────────────────────────────
+\begin{center}
+    {\large \textbf{Résultats d'analyse par substance}}
+\end{center}
+
+\vspace{6pt}
+
+\rowcolors{2}{white}{lightgray}
+\begin{tabularx}{\textwidth}{%
+    >{\raggedright\arraybackslash}X
+    >{\centering\arraybackslash}p{2.8cm}
+    >{\centering\arraybackslash}p{2cm}
+    >{\centering\arraybackslash}p{2cm}
+    >{\centering\arraybackslash}p{1.6cm}}
+\toprule
+\rowcolor{headerblue!15}
+\textbf{Substance}
+    & \textbf{Résultat détecté}
+    & \textbf{LOQ}
+    & \textbf{LMR UE}
+    & \textbf{Unité} \\
+\midrule
+
+Glyphosate         & 0.03              & 0.01   & 0.10   & mg/kg \\
+Imidacloprid       & < LOQ             & 0.005  & 0.50   & mg/kg \\
+Pyraclostrobin     & 0.12              & 0.01   & 0.30   & mg/kg \\
+Chlorpyrifos       & < LOQ             & 0.01   & 0.01   & mg/kg \\
+Cypermethrin       & 0.08              & 0.01   & 0.20   & mg/kg \\
+Acetamiprid        & 0.02              & 0.005  & 0.30   & mg/kg \\
+Lambda-cyhalothrin & < LOQ             & 0.005  & 0.10   & mg/kg \\
+Boscalid           & 0.45              & 0.01   & 3.00   & mg/kg \\
+Tebuconazole       & < LOQ             & 0.01   & 0.20   & mg/kg \\
+Azoxystrobin       & 0.31              & 0.01   & 3.00   & mg/kg \\
+
+\bottomrule
+\end{tabularx}
+
+\vspace{16pt}
+
+% ── Légende ─────────────────────────────────────────────────
+\noindent
+\textbf{Légende :} \\[4pt]
+\begin{tabular}{@{}ll@{}}
+    \textbf{< LOQ} & : Valeur inférieure à la Limite de Quantification (non détecté) \\
+    \textbf{LOQ}   & : Limite de Quantification (sensibilité de la méthode analytique) \\
+    \textbf{LMR UE}& : Limite Maximale de Résidus fixée par le Règlement (CE) n° 396/2005 \\
+\end{tabular}
+
+\vspace{12pt}
+{\color{gray}\rule{\textwidth}{0.4pt}}
+\vspace{8pt}
+
+% ── Commentaires ────────────────────────────────────────────
+\noindent\textbf{Commentaires :} \\[4pt]
+\noindent
+Toutes les substances analysées présentent des concentrations conformes aux LMR
+fixées par le Règlement (CE) n° 396/2005 applicable à la date du prélèvement.
+
+\vspace{10pt}
+
+% ── Signature ───────────────────────────────────────────────
+\begin{flushright}
+    \vspace{20pt}
+    \begin{tabular}{c}
+        \rule{6cm}{0.4pt} \\
+        Responsable technique \\
+        \textit{Dr. Ahmed Benali} \\
+        Laboratoire AgriTest Maroc \\
+        20/01/2025
+    \end{tabular}
+\end{flushright}
+
+\end{document}
