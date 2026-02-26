@@ -1,0 +1,117 @@
+.sidebar {
+    width: 260px;
+    background: #ffffff;
+    border-right: 1px solid #e2e8f0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
+}
+
+.sidebar-header {
+    padding: 20px 16px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-badge {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background: radial-gradient(circle at 30% 20%, #ffffff 0, #0c7040 45%, #063b2a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e9fdf3;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(12, 112, 64, 0.3);
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0b3b59;
+    line-height: 1.2;
+}
+
+.brand-tagline {
+    font-size: 10px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.sidebar-nav {
+    flex: 1;
+    padding: 12px 8px;
+    overflow-y: auto;
+}
+
+.sidebar-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-align: left;
+    color: #475569;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.sidebar-item:hover {
+    background: #f1f5f9;
+    color: #0c7040;
+}
+
+.sidebar-item.active {
+    background: #ecfdf5;
+    color: #0c7040;
+    font-weight: 600;
+}
+
+.sidebar-item.active .sidebar-icon {
+    transform: scale(1.1);
+}
+
+.sidebar-icon {
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+    transition: transform 0.15s ease;
+}
+
+.sidebar-label {
+    flex: 1;
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+    
+    .sidebar.open {
+        transform: translateX(0);
+    }
+}
