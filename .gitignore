@@ -128,3 +128,10 @@ coverage/
 dist/
 build/
 *.egg-info/
+
+
+# Documentation (local only)
+DETAILED_CHANGES.md
+GEMINI_SETUP_GUIDE.md
+MIGRATION_SUMMARY.md
+PROJECT_SUMMARY.md
